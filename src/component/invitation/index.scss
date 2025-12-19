@@ -1,0 +1,145 @@
+.invitation {
+  .title {
+    font-size: 1,5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+
+  }
+
+  .content {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .name {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    .relation {
+      font-size: 0.75rem;
+      opacity: 0.7;
+
+      .relation-name {
+        display: inline-block;
+        min-width: 2em;
+      }
+    }
+  }
+}
+
+.contact-modal {
+  width: 22rem;
+
+  .header {
+    .title-group {
+      text-align: center;
+      .title {
+        font-size: 1.2rem;
+        color: var(--theme-color);
+        padding: 0.5rem;
+      }
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--dark-grey-color);
+    }
+  }
+
+  .content {
+    padding: 0.7rem;
+    padding-bottom: 1rem;
+
+    .contact-info {
+      padding: 1rem 0.7rem;
+      display: grid;
+      grid-template-columns: 8rem 7rem 1fr;
+      row-gap: 0.5rem;
+
+      .relation {
+        opacity: 0.7;
+      }
+
+      .icon {
+        fill: var(--dark-color);
+        margin: 0 0.5rem 0 0.5rem;
+        opacity: 0.7;
+        width: 1rem;
+        height: 1rem;
+        &.flip {
+          transform: scaleX(-1);
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.invitation-style-2 {
+  display: flex;
+  position: relative;
+}
+
+.invitation-main {
+  flex: 1;
+  display: flex;
+  padding: 24px;
+}
+
+.invitation-divider-left {
+  width: 2px;
+  background: #9a9a9a;
+  margin-right: 16px;
+}
+
+.invitation-text {
+  font-family: Montserrat, sans-serif;
+}
+
+.invitation-hy {
+  font-family: serif;
+  font-style: italic;
+  font-size: 36px;
+  color: #c40000;
+  margin-bottom: 12px;
+}
+
+.family-block {
+  margin-bottom: 18px;
+}
+
+.family-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.invitation-side {
+  width: 64px;
+  background: #6b0f0f;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-text {
+  transform: rotate(-90deg);
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 2px;
+}
+
+.side-dot {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+}
