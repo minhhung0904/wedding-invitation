@@ -14,7 +14,7 @@ import { STATIC_ONLY } from "./env"
 function App() {
   return (
     <div className="background">
-      <BGEffect />
+      <BGEffect/>
       <div className="card-view">
         <LazyDiv className="card-group">
           <Cover />
@@ -31,7 +31,7 @@ function App() {
         <LazyDiv className="card-group">
           <Gallery />
         </LazyDiv>
-        
+
         <LazyDiv className="card-group">
           <Location />
         </LazyDiv>

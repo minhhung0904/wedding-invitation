@@ -1,6 +1,8 @@
 import coverImage from "./wedding/DSC03475.JPG"
 import imageWellcome from './icon/wellcome.png'
 import imageDate from './icon/date.png'
+import imageGroom from './icon/groom.png'
+import imageBride from './icon/bride.png'
 import image1 from "./image1.png"
 import image2 from "./image2.png"
 import image3 from "./image3.png"
@@ -17,6 +19,8 @@ import image12 from "./image12.png"
 export const COVER_IMAGE = coverImage
 export const IMAGE_WELLCOME = imageWellcome
 export const IMAGE_DATE = imageDate
+export const IMAGE_GROOM = imageGroom
+export const IMAGE_BRIDE = imageBride
 
 export const GALLERY_IMAGES = [
   image1,

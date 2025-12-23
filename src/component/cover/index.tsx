@@ -1,4 +1,4 @@
-import { COVER_IMAGE, IMAGE_WELLCOME, IMAGE_DATE } from "../../images"
+import { COVER_IMAGE, IMAGE_WELLCOME, IMAGE_DATE, IMAGE_GROOM, IMAGE_BRIDE } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 
 export const Cover = () => {
@@ -12,6 +12,10 @@ export const Cover = () => {
       </div>
       <div className="blur-wrapper">  
         <img src={COVER_IMAGE} alt="HT" />
+      </div>
+
+      <div className="groom">  
+        <img src={IMAGE_GROOM} alt="grooom" />
       </div>
     </LazyDiv>
   )
