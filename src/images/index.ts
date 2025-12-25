@@ -3,6 +3,15 @@ import imageWellcome from './icon/wellcome.png'
 import imageDate from './icon/date.png'
 import imageGroom from './icon/groom.png'
 import imageBride from './icon/bride.png'
+import imageMinhHung from './icon/MinhHung.png'
+import imageThuTrang from './icon/ThuTrang.png'
+import imgNhaCoHy from './icon/NhaCoHy.png'
+import imgNhaTrai from './icon/NhaTrai.png'
+import imgNhaGai from './icon/NhaGai.png'
+import imgChia2Nha from './icon/chia2nha.png'
+import wedding from './icon/wedding.png'
+import imgLoimoi from './icon/loimoi.png'
+
 import image1 from "./image1.png"
 import image2 from "./image2.png"
 import image3 from "./image3.png"
@@ -21,6 +30,15 @@ export const IMAGE_WELLCOME = imageWellcome
 export const IMAGE_DATE = imageDate
 export const IMAGE_GROOM = imageGroom
 export const IMAGE_BRIDE = imageBride
+export const IMAGE_MH = imageMinhHung
+export const IMAGE_TT = imageThuTrang
+export const IMAGE_NHACOHY = imgNhaCoHy
+export const IMAGE_NHATRAI = imgNhaTrai
+export const IMAGE_NHAGAI = imgNhaGai
+export const IMAGE_CHIA2NHA = imgChia2Nha
+export const IMAGE_WEDDING = wedding
+export const IMAGE_LOIMOI = imgLoimoi
+
 
 export const GALLERY_IMAGES = [
   image1,

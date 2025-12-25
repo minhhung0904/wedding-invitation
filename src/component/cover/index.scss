@@ -3,13 +3,50 @@
     justify-content: flex-end;
     align-items: left;
     display: flex;
-    padding-top: 2.5rem;
-    padding-right: 0.5rem;
+    padding-top: 2rem;
+    padding-right: 1rem;
     img {
       width: 90%;
       height: auto;
       border-color: black;
     }
+  }
+
+  .nameH {
+    margin-top: -1rem;
+  }
+
+
+  .groom {
+    position: relative;
+    top: -1rem;
+    width: 30%;
+    height: auto;
+  }
+
+  .mh {
+    margin-top: 1rem;
+    width: 40%;
+    height: auto;
+  }
+
+  .nameT {
+    margin-top: -1rem;
+  }
+
+  .bride {
+    position: relative;
+    top: -1rem;
+    width: 22%;
+    margin-right: -1rem;
+    height: auto;
+  }
+
+  .tt {
+    width: 40%;
+    height: auto;
+    margin-right: -1rem;
+    margin-left: 1.5rem;
   }
 
   .image-date {
@@ -28,7 +65,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin-top: -10rem;
+    margin-top: -12rem;
   }
 
   .blur-wrapper img {

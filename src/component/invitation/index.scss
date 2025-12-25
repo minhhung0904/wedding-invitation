@@ -1,9 +1,71 @@
 .invitation {
-  .title {
-    font-size: 1,5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
+  .container {
+    padding-top: 1rem;
+    display: flex; /* Sử dụng Flexbox để sắp xếp */
+  }
 
+  .wedding {
+    width: 100%;
+    display: flex;
+    top: -1rem;
+    flex-direction: column;
+    align-items: center;
+    padding-top: -2rem;
+    img {
+      width: 60%;
+      height: auto;
+    }
+  }
+  .nhatrai {
+    width: 47%;
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: flex-end;
+    img {
+      width: 95%;
+      height: auto;
+      float: right;
+    }
+  }
+
+  .nhagai {
+    width: 47%;
+    align-items: left;
+    padding-top: 2rem;
+    img {
+      width: 100%;
+      height: auto;
+      float: left;
+    }
+  }
+
+  .chia2nha {
+    width: 6%;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto;
+      float: center;
+    }
+  }
+
+  .loimoi {
+    width: 100%;
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: flex-end;
+    img {
+      width: 95%;
+      height: auto;
+      float: right;
+    }
+  }
+  .title {
+    font-size: 1, 5rem;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
   }
 
   .content {
@@ -28,57 +90,6 @@
   }
 }
 
-.contact-modal {
-  width: 22rem;
-
-  .header {
-    .title-group {
-      text-align: center;
-      .title {
-        font-size: 1.2rem;
-        color: var(--theme-color);
-        padding: 0.5rem;
-      }
-      .subtitle {
-        font-size: 0.9rem;
-      }
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--dark-grey-color);
-    }
-  }
-
-  .content {
-    padding: 0.7rem;
-    padding-bottom: 1rem;
-
-    .contact-info {
-      padding: 1rem 0.7rem;
-      display: grid;
-      grid-template-columns: 8rem 7rem 1fr;
-      row-gap: 0.5rem;
-
-      .relation {
-        opacity: 0.7;
-      }
-
-      .icon {
-        fill: var(--dark-color);
-        margin: 0 0.5rem 0 0.5rem;
-        opacity: 0.7;
-        width: 1rem;
-        height: 1rem;
-        &.flip {
-          transform: scaleX(-1);
-        }
-      }
-    }
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 
 .invitation-style-2 {
@@ -130,7 +141,7 @@
 
 .side-text {
   transform: rotate(-90deg);
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 2px;
 }
 
