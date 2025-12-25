@@ -1,4 +1,4 @@
-import coverImage from "./wedding/DSC03475.JPG"
+import coverImage from "./wedding/dsc03475.JPG"
 import imageWellcome from './icon/wellcome.png'
 import imageDate from './icon/date.png'
 import imageGroom from './icon/groom.png'
