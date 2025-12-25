@@ -4,10 +4,8 @@
 @use "./component/bgEffect";
 @use "./component/calendar";
 @use "./component/gallery";
-@use "./component/location";
 @use "./component/guestbook";
 @use "./component/modal";
-@use "./component/shareButton";
 
 :root {
   --theme-color: #f9f8f3;

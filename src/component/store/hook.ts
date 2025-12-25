@@ -2,12 +2,10 @@
 
 import { useContext, useEffect } from "react"
 import { StoreContext } from "./context"
-import { KAKAO_SDK_JS_KEY, NAVER_MAP_CLIENT_ID } from "../../env"
-
-const baseUrl = import.meta.env.BASE_URL
+import { NAVER_MAP_CLIENT_ID } from "../../env"
 
 const NAVER_MAP_URL = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${NAVER_MAP_CLIENT_ID}`
-const KAKAO_SDK_URL = `${baseUrl}/kakao.min.js`
+// const KAKAO_SDK_URL = `${baseUrl}/kakao.min.js`
 
 export const useNaver = () => {
   const { naver, setNaver } = useContext(StoreContext)
@@ -29,25 +27,25 @@ export const useNaver = () => {
   return naver
 }
 
-export const useKakao = () => {
-  const { kakao, setKakao } = useContext(StoreContext)
-  useEffect(() => {
-    if (!KAKAO_SDK_JS_KEY) {
-      return
-    }
+// export const useKakao = () => {
+//   const { kakao, setKakao } = useContext(StoreContext)
+//   useEffect(() => {
+//     if (!KAKAO_SDK_JS_KEY) {
+//       return
+//     }
 
-    if (!document.querySelector(`script[src="${KAKAO_SDK_URL}"]`)) {
-      const script = document.createElement("script")
-      script.addEventListener("load", () => {
-        if (!(window as any).Kakao.isInitialized()) {
-          ;(window as any).Kakao.init(KAKAO_SDK_JS_KEY)
-        }
-        setKakao((window as any).Kakao)
-      })
-      script.src = KAKAO_SDK_URL
-      document.head.appendChild(script)
-    }
-  }, [setKakao])
+//     if (!document.querySelector(`script[src="${KAKAO_SDK_URL}"]`)) {
+//       const script = document.createElement("script")
+//       script.addEventListener("load", () => {
+//         if (!(window as any).Kakao.isInitialized()) {
+//           ;(window as any).Kakao.init(KAKAO_SDK_JS_KEY)
+//         }
+//         setKakao((window as any).Kakao)
+//       })
+//       script.src = KAKAO_SDK_URL
+//       document.head.appendChild(script)
+//     }
+//   }, [setKakao])
 
-  return kakao
-}
+//   return kakao
+// }
