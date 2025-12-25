@@ -13,7 +13,7 @@ import {
   WEDDING_DATE_FORMAT,
 } from "./src/const"
 
-const distFolder = "build"
+const distFolder = "disk"
 
 let base = "/"
 
