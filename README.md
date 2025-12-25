@@ -81,7 +81,7 @@ npm run dev
    - 연락처 및 축의금 계좌 정보
 
 2. 이미지 교체
-   - `src/public/images`: 표지 이미지 및 갤러리 이미지
+   - `src/images`: 표지 이미지 및 갤러리 이미지
    - `public/preview_image.png`: SNS 공유용 미리보기 이미지
 
 3. 글귀 수정

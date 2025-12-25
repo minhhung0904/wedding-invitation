@@ -1,4 +1,4 @@
-import { IMAGE_CHIA2NHA, IMAGE_NHATRAI, IMAGE_NHAGAI, IMAGE_WEDDING, IMAGE_LOIMOI } from "../../../public/images"
+import { IMAGE_CHIA2NHA, IMAGE_NHATRAI, IMAGE_NHAGAI, IMAGE_WEDDING, IMAGE_LOIMOI } from "../../images"
 
 import { LazyDiv } from "../lazyDiv"
 export const Invitation = () => {

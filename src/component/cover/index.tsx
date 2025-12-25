@@ -1,4 +1,4 @@
-import { COVER_IMAGE, IMAGE_WELLCOME, IMAGE_DATE, IMAGE_GROOM, IMAGE_BRIDE, IMAGE_MH, IMAGE_TT } from "../../../public/images"
+import { COVER_IMAGE, IMAGE_WELLCOME, IMAGE_DATE, IMAGE_GROOM, IMAGE_BRIDE, IMAGE_MH, IMAGE_TT } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 
 export const Cover = () => {
