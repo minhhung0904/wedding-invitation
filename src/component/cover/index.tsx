@@ -1,29 +1,40 @@
-import { COVER_IMAGE, IMAGE_WELLCOME, IMAGE_DATE, IMAGE_GROOM, IMAGE_BRIDE, IMAGE_MH, IMAGE_TT } from "../../images"
+import {
+  IMAGE_CHUHY,
+  IMAGE_ANHHAODUA,
+} from "../../images"
 import { LazyDiv } from "../lazyDiv"
 
 export const Cover = () => {
   return (
     <LazyDiv className="card cover">
-      <div className="image-wellcome">
-        <img src={IMAGE_WELLCOME} alt="wellcome"/>
+      <div className="std">
+        Save The Date
       </div>
-      <div className="image-date">  
-        <img src={IMAGE_DATE} alt="HT" />
+      <div className="weddingDate">
+        24.01.2026
       </div>
-      <div className="blur-wrapper">  
-        <img src={COVER_IMAGE} alt="HT" />
+      <div className="HT"> 
+        Minh Hùng - Thu Trang
       </div>
+      <div className="AnhHT">
+        <img className="anhhaidua" src={IMAGE_ANHHAODUA} alt="AnhHT" />
+        <img className="chuhy" src={IMAGE_CHUHY} alt="ChyHy" />
+      </div>
+      <div className="rectangle-parent">
+        <div className="wedd">Wedding Invitation</div>
+        <div className="rectangle"></div>
+        <div className="recred"></div>
+        <div className="long-rectangle"></div>
+        {/* <div className="containerName">
+          <div>
+            <span>Nhà Trai</span>
 
-      <div className="nameH">  
-        <img className='groom' src={IMAGE_GROOM} alt="grooom" />
-        <img className='mh' src={IMAGE_MH} alt="mh" />
+          </div>
+          <div>
+            <span>Nhà Gái</span>
+          </div>
+        </div> */}
       </div>
-      
-      <div className="nameT">  
-        <img className="bride" src={IMAGE_BRIDE} alt="grooom" />
-        <img className="tt" src={IMAGE_TT} alt="tt" />
-      </div>
-      
     </LazyDiv>
   )
 }

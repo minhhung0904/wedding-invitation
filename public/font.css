@@ -12,3 +12,128 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Mentawai';
+  src: url('https://assets.cinelove.me/fonts/webfonts/mentawai/mentawai.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/mentawai/mentawai.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Right Here';
+  src: url('https://assets.cinelove.me/fonts/webfonts/right-here/right-here.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/right-here/right-here.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Scarlet Bradley.regular';
+  src: url('https://assets.cinelove.me/fonts/webfonts/scarlet-bradleyregular/scarlet-bradleyregular.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/scarlet-bradleyregular/scarlet-bradleyregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('https://assets.cinelove.me/fonts/webfonts/lobster/lobster.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/lobster/lobster.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Katty Diona';
+  src: url('https://assets.cinelove.me/fonts/webfonts/katty-diona/katty-diona.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/katty-diona/katty-diona.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sacramento';
+  src: url('https://assets.cinelove.me/fonts/webfonts/sacramento/sacramento.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/sacramento/sacramento.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'The Hamstter';
+  src: url('https://assets.cinelove.me/fonts/webfonts/the-hamstter/the-hamstter.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/the-hamstter/the-hamstter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amstirdam';
+  src: url('https://assets.cinelove.me/fonts/webfonts/amstirdam/amstirdam.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/amstirdam/amstirdam.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Signora';
+  src: url('https://assets.cinelove.me/fonts/webfonts/signora/signora.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/signora/signora.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://assets.cinelove.me/fonts/webfonts/montserrat/montserrat.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/montserrat/montserrat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moon Light';
+  src: url('https://assets.cinelove.me/fonts/webfonts/moon-light/moon-light.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/moon-light/moon-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Madam Ghea';
+  src: url('https://assets.cinelove.me/fonts/webfonts/madam-ghea/madam-ghea.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/madam-ghea/madam-ghea.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://assets.cinelove.me/fonts/webfonts/roboto/roboto.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/roboto/roboto.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Faugllin Balseyn';
+  src: url('https://assets.cinelove.me/fonts/webfonts/faugllin-balseyn/faugllin-balseyn.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/faugllin-balseyn/faugllin-balseyn.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
