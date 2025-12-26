@@ -12,6 +12,8 @@ import wedding from './icon/wedding.png'
 import imgLoimoi from './icon/loimoi.png'
 import imgChuHy from './icon/chuhy.png'
 import imgAnhHaiDua from './icon/anhhaidua.png'
+import anhtronhung from './icon/anhtronhung.png'
+import anhtrontrang from './icon/anhtrontrang.png'
 
 import image1 from "./image1.png"
 import image2 from "./image2.png"
@@ -40,6 +42,8 @@ export const IMAGE_WEDDING = wedding
 export const IMAGE_LOIMOI = imgLoimoi
 export const IMAGE_CHUHY = imgChuHy
 export const IMAGE_ANHHAODUA = imgAnhHaiDua
+export const IMAGE_ANHTRONHUNG = anhtronhung
+export const IMAGE_ANHHTRONTRANG = anhtrontrang
 
 export const GALLERY_IMAGES = [
   image1,

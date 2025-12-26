@@ -25,7 +25,7 @@ export default defineConfig({
         data: {
           GROOM_FULLNAME,
           BRIDE_FULLNAME,
-          DESCRIPTION: `${WEDDING_DATE.format(WEDDING_DATE_FORMAT)} ${LOCATION}`,
+          DESCRIPTION: 'Thiệp cưới của Minh Hùng và Thu Trang - 24/01/2026',
         },
       },
     }),
