@@ -108,11 +108,11 @@ body {
   min-width: 100vw;
 
   .card-view {
-    width: 480px;
+    width: 500px;
     text-align: center;
 
     @media (max-width: 600px) {
-      width: 350px;
+      width: 400px;
     }
 
     .card-group {
