@@ -19,6 +19,9 @@ import baanh from './icon/baanh.png'
 import lichngaycuoi from './icon/lichngaycuoi.png'
 import map from './icon/map.png'
 import chuhy1 from'./icon/chuhy1.png'
+import vaycuoi from './icon/vaycuoi.png'
+import ben1 from './icon/ben1.png'
+import ben2 from './icon/ben2.png'
 
 import image1 from "./image1.png"
 import image2 from "./image2.png"
@@ -54,6 +57,9 @@ export const IMAGE_BAANH = baanh
 export const IMAGE_LICHNGAYCUOI = lichngaycuoi
 export const IMAGE_MAP = map
 export const IMAGE_CHUHY1 = chuhy1
+export const IMAGE_VAYCUOI = vaycuoi
+export const IMAGE_BEN1 = ben1
+export const IMAGE_BEN2 = ben2
 
 
 export const GALLERY_IMAGES = [

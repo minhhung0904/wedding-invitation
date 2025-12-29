@@ -8,6 +8,9 @@ import {
   IMAGE_LICHNGAYCUOI,
   IMAGE_MAP,
   IMAGE_CHUHY1,
+  IMAGE_VAYCUOI,
+  IMAGE_BEN1,
+  IMAGE_BEN2,
 } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 import { useEffect, useState } from "react"
@@ -58,7 +61,7 @@ export const Cover = () => {
       setPopup({
         show: true,
         success: false,
-        message: "Vui lòng nhập họ và tên",
+        message: "Bạn quên nhập tên mất rồi!",
       })
       return
     }
@@ -168,7 +171,7 @@ export const Cover = () => {
 
           <div className="invitation">
             <div className="title-invitation">
-              THAM DỰ TIỆC MỪNG LỄ THÀNH HÔN
+              THAM DỰ LỄ THÀNH HÔN
             </div>
 
             <div className="subtitle-invitation">Vào lúc</div>
@@ -271,6 +274,13 @@ export const Cover = () => {
           </div>
         </div>
       </div>
+      <div className="rectanglered">
+        <img className='ben1' src={IMAGE_BEN1} alt="phukien1" />
+        <img className='vaycuoi' src={IMAGE_VAYCUOI} alt="vaycuoi" />
+        <img className='ben2' src={IMAGE_BEN2} alt="phukien2" />
+        <span>Hạnh phúc lớn nhất chính là có thể đặt tay mình vào tay em.</span>
+      </div>
+
 
       {popup.show && (
         <div className="popup-overlay">
