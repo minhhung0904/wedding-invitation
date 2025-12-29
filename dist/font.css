@@ -137,3 +137,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Carlytte';
+  src: url('https://assets.cinelove.me/fonts/webfonts/carlytte/carlytte.woff2') format('woff2'),
+       url('https://assets.cinelove.me/fonts/webfonts/carlytte/carlytte.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

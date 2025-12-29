@@ -14,6 +14,11 @@ import imgChuHy from './icon/chuhy.png'
 import imgAnhHaiDua from './icon/anhhaidua.png'
 import anhtronhung from './icon/anhtronhung.png'
 import anhtrontrang from './icon/anhtrontrang.png'
+import phancach from './icon/phancach.png'
+import baanh from './icon/baanh.png'
+import lichngaycuoi from './icon/lichngaycuoi.png'
+import map from './icon/map.png'
+import chuhy1 from'./icon/chuhy1.png'
 
 import image1 from "./image1.png"
 import image2 from "./image2.png"
@@ -44,6 +49,12 @@ export const IMAGE_CHUHY = imgChuHy
 export const IMAGE_ANHHAODUA = imgAnhHaiDua
 export const IMAGE_ANHTRONHUNG = anhtronhung
 export const IMAGE_ANHHTRONTRANG = anhtrontrang
+export const IMAGE_PHANCACH = phancach
+export const IMAGE_BAANH = baanh
+export const IMAGE_LICHNGAYCUOI = lichngaycuoi
+export const IMAGE_MAP = map
+export const IMAGE_CHUHY1 = chuhy1
+
 
 export const GALLERY_IMAGES = [
   image1,
