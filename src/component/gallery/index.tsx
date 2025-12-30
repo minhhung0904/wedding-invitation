@@ -3,7 +3,7 @@ import ArrowLeft from "../../icons/angle-left-sm.svg?react"
 import { LazyDiv } from "../lazyDiv"
 import { Button } from "../button"
 import { useModal } from "../modal"
-import { GALLERY_IMAGES, ALL_PHOTO_IMAGES } from "../../images"
+import { ALL_PHOTO_IMAGES } from "../../images"
 
 const CAROUSEL_ITEMS = ALL_PHOTO_IMAGES.map((item, idx) => (
   <div className="carousel-item" key={idx}>

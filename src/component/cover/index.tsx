@@ -12,28 +12,18 @@ import {
   IMAGE_BEN1,
   IMAGE_BEN2,
   IMAGE_CHONGCAM,
-  GALLERY_IMAGES,
   IMAGE_QRHUNG,
-  ALL_PHOTO_IMAGES,
   IMAGE_ANHCOICUTE,
   IMAGE_ANHHUNG2,
   IMAGE_ANHCUOI,
+  MUSIC_ICON,
 } from "../../images"
-import { Button } from "../button"
 import { LazyDiv } from "../lazyDiv"
-import { useCallback, useEffect, useMemo, useRef, useState } from "react"
-import ImageGallery from "react-image-gallery"
-import "react-image-gallery/styles/css/image-gallery.css"
+import { useEffect, useState, useRef } from "react"
 import "animate.css"
-import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
 import { Gallery } from "../gallery"
 
-const GALLERY_DATA = ALL_PHOTO_IMAGES.map((img) => ({
-  original: img,
-  thumbnail: img,
-}))
-
+import MUSIC_MP3 from "../../assets/music.mp3" // nhạc nền
 
 export const Cover = () => {
   const targetTime = new Date("2026-01-24T12:00:00+07:00").getTime()
@@ -54,6 +44,37 @@ export const Cover = () => {
     success: true,
     message: "",
   })
+
+  const musicRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+
+  useEffect(() => {
+    const autoPlayMusic = () => {
+      if (!musicRef.current) return
+
+      musicRef.current
+        .play()
+        .then(() => {
+          setIsPlaying(true)
+        })
+        .catch(() => {})
+
+      // Chỉ chạy 1 lần
+      globalThis.removeEventListener("click", autoPlayMusic)
+      globalThis.removeEventListener("scroll", autoPlayMusic)
+      globalThis.removeEventListener("touchstart", autoPlayMusic)
+    }
+
+    globalThis.addEventListener("click", autoPlayMusic)
+    globalThis.addEventListener("scroll", autoPlayMusic)
+    globalThis.addEventListener("touchstart", autoPlayMusic)
+
+    return () => {
+      globalThis.removeEventListener("click", autoPlayMusic)
+      globalThis.removeEventListener("scroll", autoPlayMusic)
+      globalThis.removeEventListener("touchstart", autoPlayMusic)
+    }
+  }, [])
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -119,8 +140,31 @@ export const Cover = () => {
     }
   }
 
+  const toggleMusic = () => {
+    if (!musicRef.current) return
+
+    if (isPlaying) {
+      musicRef.current.pause()
+    } else {
+      musicRef.current.play()
+    }
+
+    setIsPlaying(!isPlaying)
+  }
+
   return (
     <LazyDiv className="card cover">
+
+      <div
+        className={`music-player ${isPlaying ? "playing" : ""}`}
+        onClick={toggleMusic}
+      >
+        <img src={MUSIC_ICON} alt="Music" />
+      </div>
+
+      <audio ref={musicRef} loop>
+        <source src={MUSIC_MP3} type="audio/mpeg" />
+      </audio>
       <div className="std">Save The Date</div>
       <div className="weddingDate">24.01.2026</div>
       <div className="HT">Minh Hùng - Thu Trang</div>
@@ -336,9 +380,8 @@ export const Cover = () => {
             additionalClass="wedding-gallery"
           />
         </div> */}
-        <Gallery/>
+        <Gallery />
       </div>
-
 
       <div className="quamung">
         <span className="message">
@@ -383,7 +426,6 @@ export const Cover = () => {
       <div className="anhcuoi">
         <img src={IMAGE_ANHCUOI} alt="Anh cuoi" />
       </div>
-
 
       {popup.show && (
         <div className="popup-overlay">

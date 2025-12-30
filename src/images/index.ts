@@ -27,6 +27,7 @@ import qrhung from './icon/qrhung.png'
 import anhcoicute from './icon/anhcoicute.png'
 import anhhung2 from './icon/anhhung2.png'
 import anhcuoi from './icon/anhcuoi.png'
+import music from './icon/music.png'
 
 import image1 from "./image1.png"
 import image2 from "./image2.png"
@@ -70,6 +71,7 @@ export const IMAGE_QRHUNG = qrhung
 export const IMAGE_ANHCOICUTE = anhcoicute
 export const IMAGE_ANHHUNG2 = anhhung2
 export const IMAGE_ANHCUOI = anhcuoi
+export const MUSIC_ICON = music
 
 export const GALLERY_IMAGES = [
   image1,
