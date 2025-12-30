@@ -3,9 +3,9 @@ import ArrowLeft from "../../icons/angle-left-sm.svg?react"
 import { LazyDiv } from "../lazyDiv"
 import { Button } from "../button"
 import { useModal } from "../modal"
-import { GALLERY_IMAGES } from "../../images"
+import { GALLERY_IMAGES, ALL_PHOTO_IMAGES } from "../../images"
 
-const CAROUSEL_ITEMS = GALLERY_IMAGES.map((item, idx) => (
+const CAROUSEL_ITEMS = ALL_PHOTO_IMAGES.map((item, idx) => (
   <div className="carousel-item" key={idx}>
     <img src={item} draggable={false} alt={`${idx}`} />
   </div>
@@ -36,7 +36,7 @@ export const Gallery = () => {
 
   useEffect(() => {
     // preload images
-    GALLERY_IMAGES.forEach((image) => {
+    ALL_PHOTO_IMAGES.forEach((image) => {
       const img = new Image()
       img.src = image
     })
@@ -276,6 +276,31 @@ export const Gallery = () => {
     }
   }, [status])
 
+  const INDICATOR_LIMIT = 9
+
+  const indicatorIndexes = useMemo(() => {
+    const total = CAROUSEL_ITEMS.length
+    if (total <= INDICATOR_LIMIT) {
+      return Array.from({ length: total }, (_, i) => i)
+    }
+
+    const half = Math.floor(INDICATOR_LIMIT / 2)
+    let start = slide - half
+    let end = slide + half
+
+    if (start < 0) {
+      start = 0
+      end = INDICATOR_LIMIT - 1
+    }
+
+    if (end > total - 1) {
+      end = total - 1
+      start = total - INDICATOR_LIMIT
+    }
+
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i)
+  }, [slide])
+
   return (
     <LazyDiv className="card gallery">
       <h2 className="english">Gallery</h2>
@@ -343,7 +368,7 @@ export const Gallery = () => {
           </div>
         </div>
         <div className="carousel-indicator">
-          {CAROUSEL_ITEMS.map((_, idx) => (
+          {indicatorIndexes.map((idx) => (
             <button
               key={idx}
               className={`indicator${idx === slide ? " active" : ""}`}
@@ -357,16 +382,16 @@ export const Gallery = () => {
 
       <div className="break" />
 
-      <Button
+      <Button className="view-all-button button-style-3"
         onClick={() =>
           openModal({
             className: "all-photo-modal",
             closeOnClickBackground: true,
-            header: <div className="title">사진 전체보기</div>,
+            header: <div className="title">Ảnh của chúng mình</div>,
             content: (
               <>
                 <div className="photo-list">
-                  {GALLERY_IMAGES.map((image, idx) => (
+                  {ALL_PHOTO_IMAGES.map((image, idx) => (
                     <img
                       key={idx}
                       src={image}
@@ -392,13 +417,13 @@ export const Gallery = () => {
                 className="bg-light-grey-color text-dark-color"
                 onClick={closeModal}
               >
-                닫기
+                Quay lại
               </Button>
             ),
           })
         }
       >
-        사진 전체보기
+        Xem tất cả ảnh
       </Button>
     </LazyDiv>
   )

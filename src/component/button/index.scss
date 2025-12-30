@@ -19,4 +19,14 @@ button.button {
     border: none;
     padding: 0.5rem 1rem;
   }
+
+  &.button-style-3 {
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    border: solid 0.05rem var(--alt-color);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
 }

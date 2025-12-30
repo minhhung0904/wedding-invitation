@@ -16,6 +16,7 @@ $transition-duration: 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -2rem;
     .carousel {
       width: $gallery-width;
       overflow: hidden;
@@ -151,5 +152,20 @@ $transition-duration: 0.3s;
   .footer {
     display: flex;
     flex-direction: column;
+  }
+
+  .view-all-button {
+    margin-top: 1rem;
+    align-self: center;
+    font-family: 'MapoGoldenPier';
+    color: #752323;
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 1.2rem;
+    font-family: 'Lobster';
+    color: var(--theme-color);
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }

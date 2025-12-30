@@ -23,6 +23,10 @@ import vaycuoi from './icon/vaycuoi.png'
 import ben1 from './icon/ben1.png'
 import ben2 from './icon/ben2.png'
 import imagechongcam from './wedding/anh31.jpg'
+import qrhung from './icon/qrhung.png'
+import anhcoicute from './icon/anhcoicute.png'
+import anhhung2 from './icon/anhhung2.png'
+import anhcuoi from './icon/anhcuoi.png'
 
 import image1 from "./image1.png"
 import image2 from "./image2.png"
@@ -62,6 +66,10 @@ export const IMAGE_VAYCUOI = vaycuoi
 export const IMAGE_BEN1 = ben1
 export const IMAGE_BEN2 = ben2
 export const IMAGE_CHONGCAM = imagechongcam
+export const IMAGE_QRHUNG = qrhung
+export const IMAGE_ANHCOICUTE = anhcoicute
+export const IMAGE_ANHHUNG2 = anhhung2
+export const IMAGE_ANHCUOI = anhcuoi
 
 export const GALLERY_IMAGES = [
   image1,
