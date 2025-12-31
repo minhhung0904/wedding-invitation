@@ -22,18 +22,12 @@ import { LazyDiv } from "../lazyDiv"
 import { useEffect, useState, useRef } from "react"
 import "animate.css"
 import { Gallery } from "../gallery"
+import { Countdown } from '../countdown'
 
 import MUSIC_MP3 from "../../assets/music.mp3" // nhạc nền
 
 export const Cover = () => {
   const targetTime = new Date("2026-01-24T12:00:00+07:00").getTime()
-
-  const [time, setTime] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
 
   const [name, setName] = useState("")
   const [attend, setAttend] = useState("yes")
@@ -74,27 +68,6 @@ export const Cover = () => {
       globalThis.removeEventListener("scroll", autoPlayMusic)
       globalThis.removeEventListener("touchstart", autoPlayMusic)
     }
-  }, [])
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = Date.now()
-      const distance = targetTime - now
-
-      if (distance <= 0) {
-        clearInterval(timer)
-        return
-      }
-
-      setTime({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((distance / (1000 * 60)) % 60),
-        seconds: Math.floor((distance / 1000) % 60),
-      })
-    }, 1000)
-
-    return () => clearInterval(timer)
   }, [])
 
   const handleSubmit = async () => {
@@ -204,7 +177,8 @@ export const Cover = () => {
             <span className="tentrang">Thu Trang</span>
           </div>
 
-          <div className="countdown">
+          <Countdown targetTime={targetTime} />
+          {/* <div className="countdown">
             <div className="time-box">
               <span id="days">{time.days}</span>
               <small>ngày</small>
@@ -221,7 +195,7 @@ export const Cover = () => {
               <span id="seconds">{time.seconds}</span>
               <small>giây</small>
             </div>
-          </div>
+          </div> */}
 
           <div className="phancach">
             <img src={IMAGE_PHANCACH} alt="phancach" />
@@ -338,13 +312,13 @@ export const Cover = () => {
       </div>
       <div className="rectanglered">
         <img
-          className="ben1 animate__animated animate__slideInLeft"
+          className="ben1"
           src={IMAGE_BEN1}
           alt="phukien1"
         />
         <img className="vaycuoi" src={IMAGE_VAYCUOI} alt="vaycuoi" />
         <img
-          className="ben2 animate__animated animate__slideInRight"
+          className="ben2"
           src={IMAGE_BEN2}
           alt="phukien2"
         />
