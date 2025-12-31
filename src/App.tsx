@@ -28,7 +28,7 @@ function App() {
           <Routes>
             {/* Trang chính hiển thị Cover */}
             <Route 
-              path="/ht" 
+              path="/" 
               element={
                 <LazyDiv className="card-group">
                   <Cover />
