@@ -22,7 +22,7 @@ import { LazyDiv } from "../lazyDiv"
 import { useEffect, useState, useRef } from "react"
 import "animate.css"
 import { Gallery } from "../gallery"
-import { Countdown } from '../countdown'
+import { Countdown } from "../countdown"
 
 import MUSIC_MP3 from "../../assets/music.mp3" // nhạc nền
 
@@ -43,30 +43,32 @@ export const Cover = () => {
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
-    const autoPlayMusic = () => {
-      if (!musicRef.current) return
+    const music = musicRef.current
+    if (!music) return
 
-      musicRef.current
+    const events = ["click", "touchstart", "scroll"]
+
+    const handleInteraction = () => {
+      music
         .play()
         .then(() => {
           setIsPlaying(true)
+          // Chỉ gỡ bỏ khi đã play thành công (hoặc tùy mục đích của bạn)
+          events.forEach((e) =>
+            globalThis.removeEventListener(e, handleInteraction),
+          )
         })
-        .catch(() => {})
-
-      // Chỉ chạy 1 lần
-      globalThis.removeEventListener("click", autoPlayMusic)
-      globalThis.removeEventListener("scroll", autoPlayMusic)
-      globalThis.removeEventListener("touchstart", autoPlayMusic)
+        .catch((err) => console.log(err))
     }
 
-    globalThis.addEventListener("click", autoPlayMusic)
-    globalThis.addEventListener("scroll", autoPlayMusic)
-    globalThis.addEventListener("touchstart", autoPlayMusic)
+    events.forEach((e) =>
+      globalThis.addEventListener(e, handleInteraction, { passive: true }),
+    )
 
     return () => {
-      globalThis.removeEventListener("click", autoPlayMusic)
-      globalThis.removeEventListener("scroll", autoPlayMusic)
-      globalThis.removeEventListener("touchstart", autoPlayMusic)
+      events.forEach((e) =>
+        globalThis.removeEventListener(e, handleInteraction),
+      )
     }
   }, [])
 
@@ -127,7 +129,6 @@ export const Cover = () => {
 
   return (
     <LazyDiv className="card cover">
-
       <div
         className={`music-player ${isPlaying ? "playing" : ""}`}
         onClick={toggleMusic}
@@ -311,17 +312,9 @@ export const Cover = () => {
         </div>
       </div>
       <div className="rectanglered">
-        <img
-          className="ben1"
-          src={IMAGE_BEN1}
-          alt="phukien1"
-        />
+        <img className="ben1" src={IMAGE_BEN1} alt="phukien1" />
         <img className="vaycuoi" src={IMAGE_VAYCUOI} alt="vaycuoi" />
-        <img
-          className="ben2"
-          src={IMAGE_BEN2}
-          alt="phukien2"
-        />
+        <img className="ben2" src={IMAGE_BEN2} alt="phukien2" />
         <span>Hạnh phúc lớn nhất chính là có thể đặt tay mình vào tay em.</span>
       </div>
 
