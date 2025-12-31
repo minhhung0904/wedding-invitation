@@ -85,12 +85,12 @@ export const Cover = () => {
     setLoading(true)
 
     try {
-      const res = await fetch("https://your-api-url.com/confirm", {
+      const res = await fetch("https://wedding-invitation-ht.onrender.com/confirm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, attend }),
+        body: JSON.stringify({ name, attend: attend == 'yes' }),
       })
 
       if (!res.ok) throw new Error("API error")
