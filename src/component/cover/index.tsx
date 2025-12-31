@@ -13,10 +13,10 @@ import {
   IMAGE_BEN2,
   IMAGE_CHONGCAM,
   IMAGE_QRHUNG,
-  IMAGE_ANHCOICUTE,
-  IMAGE_ANHHUNG2,
+  IMAGE_ANHQUAYHUNG,
   IMAGE_ANHCUOI,
   MUSIC_ICON,
+  IMAGE_QRTRANG,
 } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 import { useEffect, useState, useRef } from "react"
@@ -31,6 +31,7 @@ export const Cover = () => {
 
   const [name, setName] = useState("")
   const [attend, setAttend] = useState("yes")
+  const [wish, setWish] = useState("")
   const [loading, setLoading] = useState(false)
 
   const [popup, setPopup] = useState({
@@ -85,24 +86,29 @@ export const Cover = () => {
     setLoading(true)
 
     try {
-      const res = await fetch("https://wedding-invitation-ht.onrender.com/confirm", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://wedding-invitation-ht.onrender.com/confirm",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          // Thêm wish vào đây
+          body: JSON.stringify({ name, attend: attend === "yes", wish }),
         },
-        body: JSON.stringify({ name, attend: attend == 'yes' }),
-      })
+      )
 
       if (!res.ok) throw new Error("API error")
 
       setPopup({
         show: true,
         success: true,
-        message: "🎉 Đã gửi xác nhận thành công!",
+        message: "🎉 Đã gửi lời chúc thành công!",
       })
 
       setName("")
       setAttend("yes")
+      setWish("") // Reset lời chúc sau khi gửi
     } catch (err) {
       console.error(err)
       setPopup({
@@ -315,7 +321,7 @@ export const Cover = () => {
         <img className="ben1" src={IMAGE_BEN1} alt="phukien1" />
         <img className="vaycuoi" src={IMAGE_VAYCUOI} alt="vaycuoi" />
         <img className="ben2" src={IMAGE_BEN2} alt="phukien2" />
-        <span>Hạnh phúc lớn nhất chính là có thể đặt tay mình vào tay em.</span>
+        <span>Chúng ta không cần đi thật nhanh, chỉ cần đi cùng nhau.</span>
       </div>
 
       <div className="white1">
@@ -331,8 +337,8 @@ export const Cover = () => {
 
       <div className="rectanglered2">
         <span>
-          Em không phải là điểm cuối của tình yêu, mà là động lực nguyên sơ của
-          nó. Vì em, anh đã yêu thế giới này.
+          Đi cùng nhau qua những năm tháng non trẻ nhất, để rồi
+          chọn ở lại bên nhau khi đã đủ trưởng thành để yêu một người suốt đời.
         </span>
         {/* <div className="card gallery">
           <h2 className="english">Gallery</h2>
@@ -352,24 +358,24 @@ export const Cover = () => {
 
       <div className="quamung">
         <span className="message">
-          Mình rất muốn được chụp chung với bạn những tấm hình kỷ niệm vì vậy
+          Chúng mình rất muốn được chụp chung với bạn những tấm hình kỷ niệm vì vậy
           hãy đến sớm hơn một chút bạn yêu nhé! Đám cưới của chúng mình sẽ trọn
-          vẹn hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn
+          vẹn hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn!
         </span>
         <span className="send-gift">GỬI QUÀ MỪNG </span>
         <div className="gift-wrapper">
           <div className="gift-row left">
             <div className="avatar">
-              <img src={IMAGE_ANHCOICUTE} alt="" />
+              <img src={IMAGE_ANHHTRONTRANG} alt="" />
             </div>
 
             <div className="gift-card">
               <div className="info">
                 <div className="role">Cô dâu</div>
                 <div className="name">Thái Thu Trang</div>
-                <div className="bank">BIDV : 012345678</div>
+                <div className="bank">BIDV : 2152923144</div>
               </div>
-              <img className="qr" src={IMAGE_QRHUNG} alt="QR" />
+              <img className="qr" src={IMAGE_QRTRANG} alt="QR" />
             </div>
           </div>
 
@@ -384,7 +390,7 @@ export const Cover = () => {
             </div>
 
             <div className="avatar">
-              <img src={IMAGE_ANHHUNG2} alt="Chú rể" />
+              <img src={IMAGE_ANHQUAYHUNG} alt="Chú rể" />
             </div>
           </div>
         </div>
