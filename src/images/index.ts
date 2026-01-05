@@ -30,6 +30,8 @@ import anhcuoi from './icon/anhcuoi.png'
 import music from './icon/music.png'
 import anhquayhung from './icon/anhquayhung.png'
 import qrtrang from './icon/qrtrang.png'
+import moitiec1 from './icon/moitiec1.png'
+import tiecnhatrai from './icon/tiecnhatrai.png'
 
 import image1 from "./image1.png"
 import image2 from "./image2.png"
@@ -76,6 +78,8 @@ export const IMAGE_ANHCUOI = anhcuoi
 export const MUSIC_ICON = music
 export const IMAGE_ANHQUAYHUNG = anhquayhung
 export const IMAGE_QRTRANG = qrtrang
+export const IMAGE_MOITIEC1 = moitiec1
+export const IMAGE_TIECNHATRAI = tiecnhatrai
 
 export const GALLERY_IMAGES = [
   image1,

@@ -17,6 +17,7 @@ import {
   IMAGE_ANHCUOI,
   MUSIC_ICON,
   IMAGE_QRTRANG,
+  IMAGE_TIECNHATRAI,
 } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 import { useEffect, useState, useRef } from "react"
@@ -26,7 +27,7 @@ import { Countdown } from "../countdown"
 
 import MUSIC_MP3 from "../../assets/music.mp3" // nhạc nền
 
-export const Cover = () => {
+export const CoverNhatrai = () => {
   const targetTime = new Date("2026-01-24T12:00:00+07:00").getTime()
 
   const [name, setName] = useState("")
@@ -152,7 +153,7 @@ export const Cover = () => {
         <img className="anhhaidua" src={IMAGE_ANHHAODUA} alt="AnhHT" />
         <img className="chuhy" src={IMAGE_CHUHY} alt="ChyHy" />
       </div>
-      <div className="rectangle-parent-base">
+      <div className="rectangle-parent">
         <div className="wedd">Wedding Invitation</div>
         <div className="rectangle"></div>
         <div className="recred"></div>
@@ -212,6 +213,24 @@ export const Cover = () => {
 
           <div className="baanh">
             <img src={IMAGE_BAANH} alt="baanh" />
+          </div>
+
+          <div className="moitiecnhagai">
+            <img src={IMAGE_TIECNHATRAI} alt="" />
+          </div>
+          <div className="map">
+              <div className="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.8306769362764!2d105.31157989759703!3d18.902805322302722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139e3000d2d12a3%3A0x84b99574330df703!2zTmjDoCB2xINuIGhvw6Ega2jhu5FpIDM!5e0!3m2!1svi!2sus!4v1766987100938!5m2!1svi!2sus"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Bản đồ địa điểm"
+                />
+              </div>
+            </div>
+
+          <div className="phancach">
+            <img src={IMAGE_PHANCACH} alt="phancach" />
           </div>
 
           <div className="invitation">
@@ -337,8 +356,8 @@ export const Cover = () => {
 
       <div className="rectanglered2">
         <span>
-          Đi cùng nhau qua những năm tháng non trẻ nhất, để rồi
-          chọn ở lại bên nhau khi đã đủ trưởng thành để yêu một người suốt đời.
+          Đi cùng nhau qua những năm tháng non trẻ nhất, để rồi chọn ở lại bên
+          nhau khi đã đủ trưởng thành để yêu một người suốt đời.
         </span>
         {/* <div className="card gallery">
           <h2 className="english">Gallery</h2>
@@ -358,9 +377,9 @@ export const Cover = () => {
 
       <div className="quamung">
         <span className="message">
-          Chúng mình rất muốn được chụp chung với bạn những tấm hình kỷ niệm vì vậy
-          hãy đến sớm hơn một chút bạn yêu nhé! Đám cưới của chúng mình sẽ trọn
-          vẹn hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn!
+          Chúng mình rất muốn được chụp chung với bạn những tấm hình kỷ niệm vì
+          vậy hãy đến sớm hơn một chút bạn yêu nhé! Đám cưới của chúng mình sẽ
+          trọn vẹn hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn!
         </span>
         <span className="send-gift">GỬI QUÀ MỪNG </span>
         <div className="gift-wrapper">

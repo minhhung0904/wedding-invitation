@@ -17,6 +17,7 @@ import {
   IMAGE_ANHCUOI,
   MUSIC_ICON,
   IMAGE_QRTRANG,
+  IMAGE_MOITIEC1,
 } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 import { useEffect, useState, useRef } from "react"
@@ -214,6 +215,24 @@ export const CoverNhagai = () => {
             <img src={IMAGE_BAANH} alt="baanh" />
           </div>
 
+          <div className="moitiecnhagai">
+            <img src={IMAGE_MOITIEC1} alt="" />
+          </div>
+          <div className="map">
+              <div className="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d490.32984196453174!2d105.32698574533372!3d18.9111809759333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDU0JzQwLjAiTiAxMDXCsDE5JzM4LjEiRQ!5e0!3m2!1svi!2s!4v1767595310964!5m2!1svi!2s"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Bản đồ địa điểm"
+                />
+              </div>
+            </div>
+
+          <div className="phancach">
+            <img src={IMAGE_PHANCACH} alt="phancach" />
+          </div>
+
           <div className="invitation">
             <div className="title-invitation">THAM DỰ LỄ THÀNH HÔN</div>
 
@@ -337,8 +356,8 @@ export const CoverNhagai = () => {
 
       <div className="rectanglered2">
         <span>
-          Đi cùng nhau qua những năm tháng non trẻ nhất, để rồi
-          chọn ở lại bên nhau khi đã đủ trưởng thành để yêu một người suốt đời.
+          Đi cùng nhau qua những năm tháng non trẻ nhất, để rồi chọn ở lại bên
+          nhau khi đã đủ trưởng thành để yêu một người suốt đời.
         </span>
         {/* <div className="card gallery">
           <h2 className="english">Gallery</h2>
@@ -358,9 +377,9 @@ export const CoverNhagai = () => {
 
       <div className="quamung">
         <span className="message">
-          Chúng mình rất muốn được chụp chung với bạn những tấm hình kỷ niệm vì vậy
-          hãy đến sớm hơn một chút bạn yêu nhé! Đám cưới của chúng mình sẽ trọn
-          vẹn hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn!
+          Chúng mình rất muốn được chụp chung với bạn những tấm hình kỷ niệm vì
+          vậy hãy đến sớm hơn một chút bạn yêu nhé! Đám cưới của chúng mình sẽ
+          trọn vẹn hơn khi có thêm lời chúc phúc và sự hiện diện của các bạn!
         </span>
         <span className="send-gift">GỬI QUÀ MỪNG </span>
         <div className="gift-wrapper">

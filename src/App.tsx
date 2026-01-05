@@ -5,6 +5,7 @@ import "./App.scss"
 import { LazyDiv } from "./component/lazyDiv"
 import { useEffect } from "react"
 import { CoverNhagai } from './component/cover-nhagai'
+import { CoverNhatrai } from './component/cover-nhatrai'
 
 // Giả sử bạn có thêm các component khác cho các trang khác
 // import { InvitationDetail } from "./component/invitationDetail"
@@ -38,6 +39,12 @@ function App() {
             <Route path="/tranghung" element={
               <LazyDiv className="card-group">
                   <CoverNhagai />
+                </LazyDiv>
+            } />
+
+            <Route path="/hungtrang" element={
+              <LazyDiv className="card-group">
+                  <CoverNhatrai />
                 </LazyDiv>
             } />
           </Routes>
