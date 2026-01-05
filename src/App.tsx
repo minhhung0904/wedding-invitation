@@ -35,7 +35,7 @@ function App() {
                 </LazyDiv>
               } 
             />
-            <Route path="/nhagai" element={
+            <Route path="/tranghung" element={
               <LazyDiv className="card-group">
                   <CoverNhagai />
                 </LazyDiv>
